@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">     
+<head>
+    <meta charset="utf-8">
+    <title>Do it</title>
+    <link href="C:\Users\tamilore\Desktop\fontAwesome\fontawesome-free-5.13.0-web\css\all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html">
+                    <img src="" alt="Do it"/>
+                </a>
+                <button type="button" class="nav-btn" onClick={this.handleToggle}>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-links show-nav">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#loginForm"><i class="fas fa-sign-in-alt"></i> Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="intro" class="main">
+        <p class="mainPara">DoIt is an easy to use website that helps you schedule tasks on different days and in order of priority. <br> Its user-friendly interface ensures that schduling tasks is not as difficult.</p>
+        <button type="button" id="logbtn" onclick="setVisible('loginForm')" class="mainBtn"><i class="fas fa-sign-up-alt"></i> Log in</button>
+        <p id="signUp">Don't have an account? <a onclick="setVisible('signupForm')">Sign up</a></p>
+    </div>
+    <div id="signupForm" class="main">
+        <form method="post">
+            <fieldset>
+                <legend>Sign up</legend>             
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="firstname" placeholder="first name" required>
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" name="lastname" placeholder="last name" required>
+                <label for="semail">Email</label>
+                <input type="email" id="uemail" name="useremail" placeholder="example@mail.com" required>
+                <label for="suname">Username</label>
+                <input type="text" id="suname" name="susername" placeholder="username" required>
+                <label for="spwd">Password</label>
+                <input type="password" id="spwd" name="spass" required>
+                <label for="scpwd">Confirm password</label>
+                <input type="password" name="scpass" required>
+                <button type="submit" class="mainBtn fas fa-sign-in-alt">Sign up</button>
+            </fieldset>
+        </form>
+    </div>
+    <div id="loginForm" class="main">
+        <form method="post">
+            <fieldset>
+                <legend>Log in</legend>
+                <label for="luname">Username</label>
+                <input type="text" id="luname" name="lusername" placeholder="username">
+                <label for="lpwd">Password</label>
+                <input type="password" id="lpwd" name="lpass" placeholder="Password">
+                <button type="submit" class="mainBtn fas fa-sign-in-alt"> 
+                Login</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
