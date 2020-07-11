@@ -33,34 +33,42 @@
         <p id="signUp">Don't have an account? <a onclick="setVisible('signupForm')">Sign up</a></p>
     </div>
     <div id="signupForm" class="main">
-        <form method="post">
+        <form name="signForm" onsubmit="return validateForm()" method="post" novalidate>
             <fieldset>
                 <legend>Sign up</legend>             
                 <label for="fname">First name</label>
-                <input type="text" id="fname" name="firstname" placeholder="first name" required>
+                <input type="text" id="fname" name="fname" placeholder="first name" required>
+                <span class="error" id="fnameErr" aria-live="polite"></span>
                 <label for="lname">Last name</label>
-                <input type="text" id="lname" name="lastname" placeholder="last name" required>
+                <input type="text" id="lname" name="lname" placeholder="last name" required>
+                <span class="error" id="lnameErr" aria-live="polite"></span>
                 <label for="semail">Email</label>
-                <input type="email" id="uemail" name="useremail" placeholder="example@mail.com" required>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                <span class="error" id="emailErr" aria-live="polite"></span>
                 <label for="suname">Username</label>
-                <input type="text" id="suname" name="susername" placeholder="username" required>
+                <input type="text" id="suname" name="suname" placeholder="username" required>
+                <span class="error" id="unameErr" aria-live="polite"></span>
                 <label for="spwd">Password</label>
-                <input type="password" id="spwd" name="spass" required>
+                <input type="password" id="spwd" name="spwd" required>
+                <span class="error" id="spwdErr" aria-live="polite"></span>
                 <label for="scpwd">Confirm password</label>
-                <input type="password" name="scpass" required>
-                <button type="submit" class="mainBtn fas fa-sign-in-alt">Sign up</button>
+                <input type="password" id="scpwd" name="scpwd" required>
+                <span class="error" id="scpwdErr" aria-live="polite"></span>
+                <button type="submit" class="mainBtn fas fa-sign-in-alt" onclick="">Sign up</button>
             </fieldset>
         </form>
     </div>
     <div id="loginForm" class="main">
-        <form method="post">
+        <form method="post" novalidate>
             <fieldset>
                 <legend>Log in</legend>
                 <label for="luname">Username</label>
-                <input type="text" id="luname" name="lusername" placeholder="username">
+                <input type="text" id="luname" name="luname" placeholder="username" required>
+                <span class="error" aria-live="polite"></span>
                 <label for="lpwd">Password</label>
-                <input type="password" id="lpwd" name="lpass" placeholder="Password">
-                <button type="submit" class="mainBtn fas fa-sign-in-alt"> 
+                <input type="password" id="lpwd" name="lpwd" placeholder="Password" required>
+                <span class="error" aria-live="polite"></span>
+                <button type="submit" class="mainBtn fas fa-sign-in-alt" onclick=""> 
                 Login</button>
             </fieldset>
         </form>

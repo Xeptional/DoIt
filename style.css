@@ -81,8 +81,23 @@ body {
     padding: 0.5rem 0;
   }
 }
-#intro {
-	display: block;
+input:invalid {
+	border-color: #900;
+	background-color: #FDD;
+}
+input:focus:invalid {
+	outline: none;
+}
+.error {
+	width: 40%;
+	padding: 0;
+	font-size: 0.5rem;
+	color: white;
+	background-color: #900;
+	box-sizing: border-box;
+}
+.error.active {
+	padding: 0.3em;
 }
 #signupForm, #loginForm {
 	display: none;
@@ -134,6 +149,9 @@ input[type=text], [type=email], [type=password] {
 	border: 1px solid rgb(0, 145, 145);
 	border-radius: 0.5rem;
 
+}
+#signupForm {
+	margin-bottom: 3rem;
 }
 #signUp {
 	font-size: 1.5rem;

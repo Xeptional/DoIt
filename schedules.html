@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-us">     
-	<head>
-	  <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <title>Do it</title>
     <link href="C:\Users\tamilore\Desktop\fontAwesome\fontawesome-free-5.13.0-web\css\all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar">
-      <div class="nav-center">
-        <div class="nav-header">
-	        <a href="index.html">
-            <img src="" alt="Do it"/>
-          </a>
-          <button type="button" class="nav-btn" onClick={this.handleToggle}>
-            <i class="fas fa-bars"></i>
-          </button>
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html">
+                    <img src="" alt="Do it"/>
+                </a>
+                <button type="button" class="nav-btn" onClick={this.handleToggle}>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-links show-nav">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#loginForm"><i class="fas fa-sign-in-alt"></i> Log in</a>
+                </li>
+            </ul>
         </div>
-        <ul class="nav-links show-nav">
-          <li>
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="#loginForm"><i class="fas fa-sign-in-alt"></i> Log in</a>
-          </li>
-        </ul>
-      </div>
     </nav>
     <div id="schedule" class="main">
     	<p class="mainPara" id="welcome">Welcome!</p>
@@ -38,6 +38,7 @@
     	<div class="schedule-item">
     		<p class="schedule-name">Schedule name</p>
             <p class="due-date">Due on: </p>
+            
             <button class="taskBtn" id="taskDel"><i class="fas fa-trash-alt">Delete</i></button>
             <button class="taskBtn" id="taskCom"><i class="fas fa-check-square"></i>  Complete</button>
     	</div>
@@ -71,14 +72,5 @@
     	</div>
     </div>
 
-    <script type="text/javascript">
-    	
-    	let n = new Date();
-    	let y = n.getFullYear();
-    	let m = n.getMonth() + 1;
-    	let d = n.getDate();
-
-    	document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-
-    </script>
+    <script src="index.js"></script>
   </body>
